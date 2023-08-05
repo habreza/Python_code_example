@@ -1,0 +1,27 @@
+# Step 1: Import the required modules from tkinter
+from tkinter import *
+
+# Step 2: Define the function 'buttonPushed' that updates the output label text
+def buttonPushed():
+    # When the button is clicked, update the text of the output label
+    output_label.config(text="Button Pushed and see the output in the root window")
+
+# Step 3: Create the main window (root) with size 400x200 pixels
+root = Tk()
+root.geometry("400x200")
+
+# Step 4: Create a label named 'w' and display "Hello World" in the root window
+w = Label(root, text="Hello World")
+w.pack()
+
+# Step 5: Create a button named 'myButton' with the text "Click here to see output"
+# and associate it with the 'buttonPushed' function
+myButton = Button(root, text="Click here to see output", command=buttonPushed)
+myButton.pack()
+
+# Step 6: Create a label named 'output_label' to display the output message
+output_label = Label(root, text="")
+output_label.pack()
+
+# Step 7: Start the main event loop to display the root window and allow user interaction
+root.mainloop()
